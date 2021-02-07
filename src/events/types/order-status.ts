@@ -1,4 +1,4 @@
-enum OrderStatus {
+export enum OrderStatus {
     // When the order has been created, but the ticket
     // it is trying to order has not been reserved.
     CREATED = 'created',
@@ -15,5 +15,3 @@ enum OrderStatus {
     // provided payment successfully
     COMPLETE = 'complete',
 }
-
-export default OrderStatus;
