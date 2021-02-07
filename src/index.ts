@@ -22,4 +22,4 @@ export * from './events/order-create-event';
 export * from './events/order-cancelled';
 
 // Event types
-export * from './events/types/order-status';
+export { OrderStatus } from './events/types/order-status';
