@@ -28,8 +28,10 @@ export abstract class Listener<T extends Event> {
     }
 
     listen() {
-        // Create a queue group to handle events in a round robin fashion with messages (events) sent to the same queue group
-        // This is to handle concurrency issues with the same message being handle at the same time with different listeners.
+        // Create a queue group to handle events in a round robin fashion
+        // with messages (events) sent to the same queue group.
+        // This is to handle concurrency issues with the same message
+        // being handle at the same time with different listeners.
         const subscription = this.client.subscribe(
             this.subject,
             this.queueGroupName,
